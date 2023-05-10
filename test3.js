@@ -2,46 +2,106 @@ document.addEventListener("DOMContentLoaded", function () {
   // Define the questions and answers
   var questions = [
     {
-      question: "What color is a gummy bear?",
+      question: "What is the average lifespan of a dog?",
       options: [
-        { text: "Red", isCorrect: false },
-        { text: "Green", isCorrect: false },
-        { text: "Yellow", isCorrect: true },
+        { text: "5-8 years", isCorrect: false },
+        { text: "10-12 years", isCorrect: true },
+        { text: "15-18 years", isCorrect: false },
+        { text: "20-25 years", isCorrect: false },
       ],
     },
     {
-      question: "What is the most popular gummy bear flavor?",
+      question:
+        "Which of the following factors should be considered before adopting a dog?",
       options: [
-        { text: "Strawberry", isCorrect: false },
-        { text: "Lemon", isCorrect: false },
-        { text: "Raspberry", isCorrect: false },
-        { text: "Orange", isCorrect: true },
+        { text: "Time commitment for exercise and training", isCorrect: false },
+        {
+          text: "Financial responsibilities (food, vaccinations, vet visits)",
+          isCorrect: false,
+        },
+        { text: "Living situation and space available", isCorrect: false },
+        { text: "All of the above", isCorrect: true },
       ],
     },
     {
-      question: "hi",
+      question: "What is the importance of spaying or neutering your dog?",
       options: [
-        { text: "Strawberry", isCorrect: false },
-        { text: "Lemon", isCorrect: false },
-        { text: "Raspberry", isCorrect: false },
-        { text: "Orange", isCorrect: true },
+        { text: "It reduces the risk of certain diseases", isCorrect: false },
+        { text: "It helps control the pet population", isCorrect: false },
+        { text: "It can improve the dog's behavior", isCorrect: false },
+        { text: "All of the above", isCorrect: true },
       ],
     },
     {
-      question: "what",
+      question:
+        "How often should a dog be taken for regular veterinary check-ups?",
       options: [
-        { text: "Strawberry", isCorrect: false },
-        { text: "Orange", isCorrect: true },
+        { text: "Once a year", isCorrect: true },
+        { text: "Every 3-4 years", isCorrect: false },
+        { text: "Only when the dog is sick", isCorrect: false },
+        { text: "Never necessary", isCorrect: false },
       ],
     },
     {
-      question: "I don'tnkno?",
+      question: "Which of the following foods should NOT be fed to dogs?",
       options: [
-        { text: "Strawberry", isCorrect: false },
-        { text: "Orange", isCorrect: true },
+        { text: "Chocolate", isCorrect: false },
+        { text: "Grapes or raisins", isCorrect: false },
+        { text: "Onions or garlic", isCorrect: false },
+        { text: "All of the above", isCorrect: true },
       ],
     },
-    // Add more questions...
+    {
+      question:
+        "Do dogs require regular exercise to maintain their physical and mental well-being?",
+      options: [
+        { text: "True", isCorrect: true },
+        { text: "False", isCorrect: false },
+      ],
+    },
+    {
+      question:
+        "Which of the following dog breeds is considered hypoallergenic?",
+      options: [
+        { text: "Labrador Retriever", isCorrect: false },
+        { text: "Poodle", isCorrect: true },
+        { text: "Siberian Husky", isCorrect: false },
+        { text: "Golden Retriever", isCorrect: false },
+      ],
+    },
+    {
+      question:
+        "What is the recommended minimum age for children in a household to safely interact with a dog?",
+      options: [
+        { text: "2 years old", isCorrect: false },
+        { text: "5 years old", isCorrect: false },
+        { text: "10 years old", isCorrect: true },
+        { text: "There is no age restriction", isCorrect: false },
+      ],
+    },
+    {
+      question:
+        "What should you do if your dog shows signs of aggression or behavioral issues?",
+      options: [
+        {
+          text: "Seek professional help from a dog trainer or behaviorist",
+          isCorrect: true,
+        },
+        { text: "Ignore the behavior and hope it goes away", isCorrect: false },
+        { text: "Give the dog away to someone else", isCorrect: false },
+        { text: "None of the above", isCorrect: false },
+      ],
+    },
+    {
+      question:
+        "How much time, on average, should you expect to spend daily on dog care and companionship?",
+      options: [
+        { text: " Less than 30 minutes", isCorrect: false },
+        { text: "1-2 hours", isCorrect: false },
+        { text: "3-4 hours", isCorrect: false },
+        { text: " It varies depending on the dog's needs", isCorrect: true },
+      ],
+    },
   ];
 
   var currentQuestionIndex = 0;
@@ -83,9 +143,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isAnswerSelected) {
           if (option.isCorrect) {
             score++;
-          } else {
-            score--;
           }
+          // } else {
+          //   score--;
+          // }
 
           isAnswerSelected = true;
 
