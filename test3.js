@@ -149,5 +149,43 @@ document.addEventListener("DOMContentLoaded", function () {
     var finalScore = score < 0 ? 0 : score; // Ensure the score is not negative
     resultElement.textContent =
       "Your score: " + finalScore + "/" + questions.length;
+
+    //text base on the score
+    var textElement = document.createElement("p");
+    // var imageElement = document.createElement("img");
+
+    if (finalScore > 4) {
+      textElement.textContent = "Wow, you really are a Gummy lover!";
+      // resultContainer.style.backgroundImage =
+      //   'url("/Image/happy-gummy-bear.jpg")';
+      document.body.style.backgroundImage =
+        'url("/Image/happy-gummy-bear.jpg")';
+    } else if (finalScore > 1) {
+      textElement.textContent =
+        "Umm not bad... but you should love gummy bears more.";
+
+      // var imageElement = document.createElement("img");
+
+      // resultContainer.style.backgroundImage =
+      //   'url("/Image/disappointed-gummy-bear.jpg")';
+      document.body.style.backgroundImage =
+        'url("/Image/dissapoint-gummy-bear.png")';
+    } else {
+      textElement.textContent =
+        "What? You don't even know the 'G' of gummy bears.";
+
+      // var imageElement = document.createElement("img");
+
+      // resultContainer.style.backgroundImage =
+      //   'url("/Image/happy-gummy-bear.jpg")';
+      document.body.style.backgroundImage =
+        'url("/Image/crying-gummy-bear.jpg")';
+    }
+
+    resultContainer.appendChild(textElement);
+    // resultContainer.appendChild(imageElement);
+    // document.body.style.backgroundImage = resultContainer.style.backgroundImage;
+    // resultContainer.style.backgroundColor = "lightgray";
+    resultContainer.style.backgroundImage = "none";
   }
 });
