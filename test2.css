@@ -47,20 +47,49 @@ body {
 }
 
 .btn {
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  margin: 10px;
+  border: 1px solid burlywood;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px 2px; */
   font-size: 20px; /* Increase the font size for bigger buttons */
   padding: 20px 35px; /* Adjust the padding for bigger buttons */
   background-color: tan;
 }
 
-.btn-grid {
-  display: grid;
-  gap: 20px; /* Add a gap between buttons */
-  margin-top: 200px;
+/* .btn-grid { */
+/* display: grid; */
+/* gap: 20px; Add a gap between buttons */
+/* margin-top: 200px; */
+/* } */
+
+/* .btn-grid button {
+  margin-top: 0; /* Reset margin-top for in dividual buttons */
+/* } */
+
+.btn-next {
+  padding: 10px 20px; /* Adjust the padding for the button */
+  width: auto; /* Allow the button to adjust its width based on content */
+  float: right; /* Float the button to the right */
+  background-color: lightgreen;
+  border: 1px solid green;
+  border-radius: 5px;
 }
 
-.btn-grid button {
-  margin-top: 0; /* Reset margin-top for individual buttons */
+.btn:hover {
+  border-color: palevioletred;
+  background-color: pink;
+  color: palevioletred;
+}
+
+.btn-next:hover {
+  border-color: lightblue;
+  background-color: lightskyblue;
+  color: lightsteelblue;
+}
+
+.btn-answer-selected {
+  background-color: coral;
 }
 
 .center-tittle {

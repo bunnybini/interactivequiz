@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var currentQuestionIndex = 0;
   var score = 0;
+  var isAnswerSelected = false;
 
   // Get HTML elements
   var questionElement = document.getElementById("question");
@@ -76,21 +77,33 @@ document.addEventListener("DOMContentLoaded", function () {
       optionsElement.appendChild(button);
     }
 
-    // Function to create an event listener for the answer option
     function createOptionClickListener(option) {
       return function () {
         // Check if the selected answer is correct
-        if (option.isCorrect) {
-          score++;
-        } else {
-          score--;
+        if (!isAnswerSelected) {
+          if (option.isCorrect) {
+            score++;
+          } else {
+            score--;
+          }
+
+          isAnswerSelected = true;
+
+          // Disable all answer options
+          disableOptions();
+
+          // Show the next button
+          nextButton.style.display = "block";
+
+          // Remove the "btn-answer-selected" class from all buttons
+          var answerButtons = document.getElementsByClassName("answer");
+          for (var j = 0; j < answerButtons.length; j++) {
+            answerButtons[j].classList.remove("btn-answer-selected");
+          }
+
+          // Add the "btn-answer-selected" class to the clicked button
+          this.classList.add("btn-answer-selected");
         }
-
-        // Disable all answer options
-        disableOptions();
-
-        // Show the next button
-        nextButton.style.display = "block";
       };
     }
   }
@@ -113,14 +126,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Check if there are more questions
     if (currentQuestionIndex < questions.length) {
+      isAnswerSelected = false;
       // Show the next question
+
       showQuestion();
     } else {
       // Show the final result
       showResult();
     }
   });
-
   // Function to display the final result
   function showResult() {
     // Hide the quiz container
@@ -132,6 +146,8 @@ document.addEventListener("DOMContentLoaded", function () {
     resultContainer.style.display = "block";
 
     // Display the score
-    resultElement.textContent = "Your score: " + score + "/" + questions.length;
+    var finalScore = score < 0 ? 0 : score; // Ensure the score is not negative
+    resultElement.textContent =
+      "Your score: " + finalScore + "/" + questions.length;
   }
 });
