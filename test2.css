@@ -10,13 +10,15 @@ h1 {
   /* color: aqua; */
 }
 h2 {
+  font-size: 2.5rem;
   color: palevioletred;
 }
 
 p {
   color: gray;
 }
-h1-tittle {
+
+.h1-tittle {
   color: palevioletred;
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
 }
@@ -46,10 +48,38 @@ body {
 
 .btn {
   margin-top: 10px;
-  font-size: 16px;
-  padding: 10px 20px;
-  /* background-color: tan;
-  border: 1px solid burlywood; */
+  font-size: 20px; /* Increase the font size for bigger buttons */
+  padding: 20px 35px; /* Adjust the padding for bigger buttons */
+  background-color: tan;
+}
+
+.btn-grid {
+  display: grid;
+  gap: 20px; /* Add a gap between buttons */
+  margin-top: 200px;
+}
+
+.btn-grid button {
+  margin-top: 0; /* Reset margin-top for individual buttons */
+}
+
+.center-tittle {
+  margin: 0;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  /* -ms-transform: translate(-30%, -50%); */
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 800px;
+  max-height: 100%;
+  max-width: 100%;
+  /* background-color: white; */
+  padding: 10px;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px 2px; */
 }
 
 ul {

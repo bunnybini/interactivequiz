@@ -66,32 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear any existing answer options
     optionsElement.innerHTML = "";
 
-    // Create and append new answer options
-    // for (var i = 0; i < currentQuestion.options.length; i++) {
-    //   var option = currentQuestion.options[i];
-    //   var button = document.createElement("button");
-    //   button.textContent = option.text;
-    //   button.classList.add("btn");
-    //   button.addEventListener("click", function () {
-    //     // Check if the selected answer is correct
-    //     if (option.isCorrect) {
-    //       score++;
-    //     }
-
-    //     if (!option.isCorrect) {
-    //       score--;
-    //     }
-
-    //     // Disable all answer options
-    //     disableOptions();
-
-    //     // Show the next button
-    //     nextButton.style.display = "block";
-    //   });
-
-    //   optionsElement.appendChild(button);
-    // }
-
     for (var i = 0; i < currentQuestion.options.length; i++) {
       var option = currentQuestion.options[i];
       var button = document.createElement("button");
