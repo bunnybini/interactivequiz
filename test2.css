@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Marker Felt";
+}
+h1 {
+  font-size: 4.5rem;
+  border-bottom: 1px solid palevioletred;
+  /* color: aqua; */
+}
+h2 {
+  color: palevioletred;
+}
+
+p {
+  color: gray;
+}
+h1-tittle {
+  color: palevioletred;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 40vh;
+  /* background-color: bisque; */
+  /* background-image: url("./image/FirstPage-01.jpg"); */
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.btn {
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 10px 20px;
+  /* background-color: tan;
+  border: 1px solid burlywood; */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.answer {
+  cursor: pointer;
+}
+
+#result-container {
+  margin-top: 50px;
+}
