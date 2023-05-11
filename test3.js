@@ -61,22 +61,22 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       question:
-        "Which of the following dog breeds is considered hypoallergenic?",
+        "How often should a dog's teeth be brushed to maintain good oral hygiene?",
       options: [
-        { text: "Labrador Retriever", isCorrect: false },
-        { text: "Poodle", isCorrect: true },
-        { text: "Siberian Husky", isCorrect: false },
-        { text: "Golden Retriever", isCorrect: false },
+        { text: "Once a month", isCorrect: false },
+        { text: "Once a week", isCorrect: false },
+        { text: "Every six months", isCorrect: false },
+        { text: "Every day or every other day", isCorrect: true },
       ],
     },
     {
       question:
-        "What is the recommended minimum age for children in a household to safely interact with a dog?",
+        "Which of the following is a sign that a dog is experiencing anxiety or stress?",
       options: [
-        { text: "2 years old", isCorrect: false },
-        { text: "5 years old", isCorrect: false },
-        { text: "10 years old", isCorrect: true },
-        { text: "There is no age restriction", isCorrect: false },
+        { text: "Wagging tail", isCorrect: false },
+        { text: "Relaxed body posture", isCorrect: false },
+        { text: "Dilated pupils and panting", isCorrect: true },
+        { text: "Playful behavior", isCorrect: false },
       ],
     },
     {
@@ -215,32 +215,30 @@ document.addEventListener("DOMContentLoaded", function () {
     var textElement = document.createElement("p");
     // var imageElement = document.createElement("img");
 
-    if (finalScore > 4) {
-      textElement.textContent = "Wow, you really are a Gummy lover!";
+    if (finalScore > 7) {
+      textElement.textContent =
+        "Congratulations! You scored 8/10 or higher. You have shown a strong understanding of responsible dog ownership and are well-prepared to welcome a furry friend into your life. Keep up the great work!";
       // resultContainer.style.backgroundImage =
       //   'url("/Image/happy-gummy-bear.jpg")';
-      document.body.style.backgroundImage =
-        'url("/Image/happy-gummy-bear.jpg")';
-    } else if (finalScore > 1) {
+      document.body.style.backgroundImage = 'url("/Image/pawHappy")';
+    } else if (finalScore > 3) {
       textElement.textContent =
-        "Umm not bad... but you should love gummy bears more.";
+        "Well done! You scored 4/10 or higher. You have demonstrated some knowledge about dog care and ownership, but there is still room for improvement. Take some time to research and learn more to ensure you provide the best care for your future four-legged companion.";
 
       // var imageElement = document.createElement("img");
 
       // resultContainer.style.backgroundImage =
       //   'url("/Image/disappointed-gummy-bear.jpg")';
-      document.body.style.backgroundImage =
-        'url("/Image/dissapoint-gummy-bear.png")';
+      document.body.style.backgroundImage = 'url("/Image/pawNormal.jpg")';
     } else {
       textElement.textContent =
-        "What? You don't even know the 'G' of gummy bears.";
+        "Thank you for taking the quiz. You scored lower than 3/10. It seems you may need to enhance your knowledge about dog care and ownership before considering adopting a furry friend. Take this as an opportunity to educate yourself on the responsibilities and requirements involved in providing a loving and caring home for a dog.";
 
       // var imageElement = document.createElement("img");
 
       // resultContainer.style.backgroundImage =
       //   'url("/Image/happy-gummy-bear.jpg")';
-      document.body.style.backgroundImage =
-        'url("/Image/crying-gummy-bear.jpg")';
+      document.body.style.backgroundImage = 'url("/Image/pawSAD.jpg")';
     }
 
     resultContainer.appendChild(textElement);
