@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Congratulations! You scored 8/10 or higher. You have shown a strong understanding of responsible dog ownership and are well-prepared to welcome a furry friend into your life. Keep up the great work!";
       // resultContainer.style.backgroundImage =
       //   'url("/Image/happy-gummy-bear.jpg")';
-      document.body.style.backgroundImage = 'url("/Image/pawHappy")';
+      document.body.style.backgroundImage = 'url("/Image/pawHappy.jpg")';
     } else if (finalScore > 3) {
       textElement.textContent =
         "Well done! You scored 4/10 or higher. You have demonstrated some knowledge about dog care and ownership, but there is still room for improvement. Take some time to research and learn more to ensure you provide the best care for your future four-legged companion.";
